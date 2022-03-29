@@ -25,7 +25,7 @@ const  Categorycard = () =>  {
   <h1 className="Categorycard-heading">Categories</h1>
   <div className="card-grid">{
             data.map((item) => {
-              return <div className="card card-shadow">
+              return <div key={item._id} className="card card-shadow">
                 <div className="card-header card-image">
                   <img src={item.img} alt={item.alt}/>
                 </div>

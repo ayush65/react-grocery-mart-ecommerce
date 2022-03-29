@@ -6,7 +6,7 @@ const Footer = () => {
     <div className="Footer-container">
     
         <div className="Footer">
-        <div class="footer-col">
+        <div className="footer-col">
   	 			<ul className="footer-links footer-align">
   	 				<li><a  className="footer-links" href="#">About us</a></li>
   	 				<li><a className="footer-links" href="#">Services</a></li>

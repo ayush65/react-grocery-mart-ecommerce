@@ -15,7 +15,7 @@ const  Navbar = () => {
     <div className={
             showMediaIcons ? "menu-link mobile-menu-link navbar-menu" : "menu-link navbar-menu"
           }>
-            <ui className="navbar-list-links">
+            <ul className="navbar-list-links">
                 <li className="navbar-links">
                     <a href="#" className="navbar-links">Bakery</a>
                 </li>
@@ -25,11 +25,11 @@ const  Navbar = () => {
                 <li className="navbar-links">
                     <a href="#" className="navbar-links">Home Essential</a>
                 </li>
-            </ui>
+            </ul>
         </div>
 
         <div className="navbar-components">
-            <ui className="navbar-list-links-components"> 
+            <ul className="navbar-list-links-components"> 
                 <li className="navbar-links icons-align">
                     <a href="#" className="icon-size"><BsFillHeartFill/></a>
                 </li>
@@ -39,7 +39,7 @@ const  Navbar = () => {
                 <li className="navbar-links icons-align">
                     <a href="#" className="icon-size"><BsPersonCircle /></a>
                 </li>
-            </ui>
+            </ul>
         </div>
         <div className="hamburger-menu">
             <a href="#" className="icon-size" onClick={() => setShowMediaIcons(!showMediaIcons)}>
