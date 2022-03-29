@@ -4,7 +4,7 @@ import axios from "axios";
 import { useState,useEffect } from "react";
 
 
-function Categorycard() {
+const  Categorycard = () =>  {
 
   const[data,setData]=useState([])
 
@@ -27,7 +27,7 @@ function Categorycard() {
             data.map((item) => {
               return <div className="card card-shadow">
                 <div className="card-header card-image">
-                  <img src={item.img}/>
+                  <img src={item.img} alt={item.alt}/>
                 </div>
                 <h1 className="card-body">
                   {item.Description}

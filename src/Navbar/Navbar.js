@@ -3,20 +3,16 @@ import "./Navbar.css";
 import { BsFillHeartFill , BsFillCartFill , BsPersonCircle} from "react-icons/bs";
 import { GiHamburgerMenu } from "react-icons/gi";
 
-function Navbar() {
+const  Navbar = () => {
     const [showMediaIcons, setShowMediaIcons] = useState(false);
 
   return (
     <>
-     <div className="navbar-container">
-    
-        
+     <div className="navbar-container">  
      <div className="navbar-logo">
             <h1>Grocery Mart</h1>
-        </div>
-
-
-        <div className={
+    </div>
+    <div className={
             showMediaIcons ? "menu-link mobile-menu-link navbar-menu" : "menu-link navbar-menu"
           }>
             <ui className="navbar-list-links">

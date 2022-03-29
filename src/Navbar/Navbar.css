@@ -122,8 +122,8 @@ html {
         padding-left: 3rem;
         transition: all 2s linear;
         transform-origin: top;
-        box-shadow: var(--navbar-shadow) 0px 50px 100px -20px,
-          var(--navbar-shad) 0px 30px 60px -30px;
+        box-shadow: var(--navbar-shadow) 0rem 3.125rem 6.25rem -1.25rem,
+          var(--navbar-shad) 0rem 1.875rem 3.75rem -1.875rem;
     }
     .navbar-list-links {
         height: 20rem;

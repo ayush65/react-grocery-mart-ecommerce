@@ -1,7 +1,7 @@
 import React from 'react'
-import './Banner.css'
+import './carousel.css'
 
-function Carousel() {
+const  Carousel = () => {
   return (
     <>
     <div className="Banner-image">
