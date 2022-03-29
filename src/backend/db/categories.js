@@ -1,27 +1,62 @@
 import { v4 as uuid } from "uuid";
 
-/**
- * Category Database can be added here.
- * You can add category of your wish with different attributes
- * */
-
 export const categories = [
   {
     _id: uuid(),
-    categoryName: "fiction",
-    description:
-      "literature in the form of prose, especially novels, that describes imaginary events and people",
+    img: "https://grocery-mart-ecom.netlify.app/component-page/homepage/homepage-images/homepage-fruits-category.jpg",
+    Description:
+      "Fruits And Vegetables",
+      alt: "Fruits-essential-image",
   },
   {
     _id: uuid(),
-    categoryName: "non-fiction",
-    description:
-      "Non-fiction is writing that gives information or describes real events, rather than telling a story.",
+    img: "https://grocery-mart-ecom.netlify.app/component-page/homepage/homepage-images/homepage-dairy-category.jpg",
+    Description:
+      "Dairy Essential",
+      alt: "Dairy-essential-image",
   },
   {
     _id: uuid(),
-    categoryName: "horror",
-    description:
-      "Meant to cause discomfort and fear for both the character and readers, horror writers often make use of supernatural and paranormal elements in morbid stories that are sometimes a little too realistic.",
+    img: "https://grocery-mart-ecom.netlify.app/component-page/homepage/homepage-images/homepage-breakfast-categoryi.jpg",
+    Description:
+      "Breakast Essential",
+      alt: "breakfast-essential-image",
   },
+  {
+    _id: uuid(),
+    img: "https://grocery-mart-ecom.netlify.app/component-page/homepage/homepage-images/homepage-bakery-category.jpg",
+    Description:
+      "Bakery Essential",
+      alt: "bakery-essential-image",
+  },
+  {
+    _id: uuid(),
+    img: "https://grocery-mart-ecom.netlify.app/component-page/homepage/homepage-images/homepage-cold-drink-categoryi.png",
+    Description:
+      "Cold Drinks",
+      alt: "cold-drink-image",
+  },
+  {
+    _id: uuid(),
+    img: "https://grocery-mart-ecom.netlify.app/component-page/homepage/homepage-images/homepage-sweets-category.jpg",
+    Description:
+      "Sweets",
+      alt: "sweets-image",
+  },
+  {
+    _id: uuid(),
+    img: "https://grocery-mart-ecom.netlify.app/component-page/homepage/homepage-images/homepage-rice-dal-category.jpg",
+    Description:
+      "Rice and Dal",
+      alt: "rice-and-dal-image",
+  },
+  {
+    _id: uuid(),
+    img: "https://grocery-mart-ecom.netlify.app/component-page/homepage/homepage-images/homepage-masala-category.jpg",
+    Description:
+      "Masala essential",
+      alt: "masala-essential-image",
+  },
+
+
 ];
