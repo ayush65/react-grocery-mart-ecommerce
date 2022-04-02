@@ -1,5 +1,5 @@
 import React from 'react'
-import { Footer, Navbar } from '../Homepage-components'
+import {  Navbar } from '../Homepage-components'
 import SideBar from '../SideBar/SideBar'
 import ProductCard from './ProductCards/ProductCard'
 

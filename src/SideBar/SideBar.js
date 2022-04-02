@@ -1,6 +1,5 @@
-import React, { useState } from "react";
+import React from "react";
 import './SideBar.css'
-import { v4 as uuid } from "uuid";
 
 
 function SideBar() {
