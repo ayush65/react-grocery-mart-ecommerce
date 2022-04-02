@@ -4,7 +4,14 @@
     font-family: 'Open Sans', sans-serif;
 }
 
-
+.card-grid {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 1.5rem;
+    align-items: flex-start;
+    margin-left: 2.8rem;
+    padding-bottom: 10rem;
+}
 .Categorycard{
     position: absolute;
     top: 70%;

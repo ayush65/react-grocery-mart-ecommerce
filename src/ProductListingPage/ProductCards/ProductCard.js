@@ -2,7 +2,6 @@ import React from 'react'
 import axios from "axios";
 import { useState,useEffect } from "react";
 import './ProductCard.css';
-import { Footer } from '../../Homepage-components';
 
 function ProductCard() {
 
@@ -46,8 +45,8 @@ function ProductCard() {
     </div>
 
 </div>
+
     </div>
-    
   )
 }
 
