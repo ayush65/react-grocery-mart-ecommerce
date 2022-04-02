@@ -1,0 +1,16 @@
+.main-menu{
+    top: 7%;
+    height: 100%;
+    width: 15%;
+    text-align: start;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+.sidebar-margin{
+    margin-top: 3rem;
+}
+.sidebar-components-margin{
+    margin-left: 2rem;
+    text-decoration: none;
+    list-style: none;
+}
