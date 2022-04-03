@@ -1,32 +1,18 @@
 import React from 'react'
-import axios from "axios";
-import { useState,useEffect } from "react";
 import './ProductCard.css';
+
+import { useFilter } from "../../context/filter-context";
 
 function ProductCard() {
 
-
-
-  const[data,setData]=useState([])
-
-  async function getCategories() {
-    try {
-      const response = await axios.get("/api/products");
-      const res = response.data.products;
-      setData(res);
-
-    } catch (error) {
-      console.error(error);
-    }
-  }
-  useEffect(() => getCategories(), []);
-
+  const { State } = useFilter();
+  
   return (
     <div>
 
 <div className="product-container">
 <div className="card-grid">{
-            data.map((item) => {
+            State.product.map((item) => {
               return <div key={item._id} className="card card-shadow">
                 <div className="card-header card-image">
                   <img src={item.imgUrl} alt={item.alt}/>
