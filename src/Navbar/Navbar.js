@@ -2,6 +2,7 @@ import React,{useState} from 'react'
 import "./Navbar.css";
 import { BsFillHeartFill , BsFillCartFill , BsPersonCircle} from "react-icons/bs";
 import { GiHamburgerMenu } from "react-icons/gi";
+import { Link } from 'react-router-dom'
 
 const  Navbar = () => {
     const [showMediaIcons, setShowMediaIcons] = useState(false);
@@ -10,20 +11,21 @@ const  Navbar = () => {
     <>
      <div className="navbar-container">  
      <div className="navbar-logo">
-            <h1>Grocery Mart</h1>
+             <Link to="/" className="navbar-links-header"><h1>Grocery Mart</h1></Link>
     </div>
     <div className={
             showMediaIcons ? "menu-link mobile-menu-link navbar-menu" : "menu-link navbar-menu"
           }>
             <ul className="navbar-list-links">
+
                 <li className="navbar-links">
-                    <a href="#" className="navbar-links">Bakery</a>
+                <Link to="" className="navbar-links">Bakery</Link>
                 </li>
                 <li className="navbar-links">
-                    <a href="#" className="navbar-links" >Fruits And Vegetables</a>
+                    <Link to="" className="navbar-links">Fruits And Vegetables</Link>
                 </li>
                 <li className="navbar-links">
-                    <a href="#" className="navbar-links">Home Essential</a>
+                <Link to="" className="navbar-links">Home Essential</Link>
                 </li>
             </ul>
         </div>
@@ -31,20 +33,21 @@ const  Navbar = () => {
         <div className="navbar-components">
             <ul className="navbar-list-links-components"> 
                 <li className="navbar-links icons-align">
-                    <a href="#" className="icon-size"><BsFillHeartFill/></a>
+                    <Link to="" className="icon-size"><BsFillHeartFill/></Link>
                 </li>
                 <li className="navbar-links icons-align">
-                    <a href="#" className="icon-size"><BsFillCartFill/></a>
+                    <Link to="" className="icon-size"><BsFillCartFill/></Link>
+                    
                 </li>
                 <li className="navbar-links icons-align">
-                    <a href="#" className="icon-size"><BsPersonCircle /></a>
+                    <Link to="" className="icon-size"><BsPersonCircle /></Link>
                 </li>
             </ul>
         </div>
         <div className="hamburger-menu">
-            <a href="#" className="icon-size" onClick={() => setShowMediaIcons(!showMediaIcons)}>
+            <Link to="" className="icon-size" onClick={() => setShowMediaIcons(!showMediaIcons)}>
               <GiHamburgerMenu />
-            </a>
+            </Link>
           </div>
   </div>
     </>

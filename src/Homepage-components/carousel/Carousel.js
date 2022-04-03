@@ -1,5 +1,7 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import './carousel.css'
+
 
 const  Carousel = () => {
   return (
@@ -10,7 +12,8 @@ const  Carousel = () => {
     <div className="Banner-container">
       <h1>Grocery Mart</h1>
       <h2>100% Fresh And Organic</h2>
-      <button className="btn btn-banner">Shop Now</button>
+      <Link to="/productListing" className="btn btn-banner">Shop Now</Link>
+
     </div>
 
     </>

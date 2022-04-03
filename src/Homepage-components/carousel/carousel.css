@@ -35,6 +35,10 @@
     transition: 0.8s;
     position: relative;
     overflow: hidden;
+    position: absolute;
+    left: 45%;
+    text-decoration: none;
+    list-style-type: none;
   }
   .btn-banner{
     background-color:  var(--primary-color);
@@ -48,6 +52,15 @@
     .Banner-container{
         top: 30%;
         left: 50%;
+    }
+
+
+  }
+
+  @media (max-width: 400px) {
+
+    .btn{
+      left: 23%;
     }
 
   }

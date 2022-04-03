@@ -2,6 +2,7 @@
 :root {
     --primary-color : #001B2E ;
     --white: white ;
+    --tertiary-color : #023E8A;
     --navbar-hover: #AED1E6;
     --navbar-shadow: rgba(50, 50, 93, 0.25);
     --navbar-shad: rgba(0, 0, 0, 0.3);
