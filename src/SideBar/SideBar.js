@@ -1,63 +1,152 @@
 import React from "react";
 import './SideBar.css'
+import { AiTwotoneStar } from "react-icons/ai";
+import { useFilter } from "../context/filter-context";
 
 
 function SideBar() {
 
+  const { State, Dispatch } = useFilter();
+  const { price, category, sort } = State;
 
   return (
     <>
 
         <div className="main-menu">
 
-        
+
 
 
         <h1>Sort by Price</h1>
         <ul className="sidebar-components-margin">
-        <li>
-            <input type="radio" className="sidebar-price sidebar-price-low-to-high" name="price" value="price-sort"/>
-            <label >Low to High</label>
+          <li>
+        <label
+          onClick={() =>
+            Dispatch({ type: "SORT_FILTER", payload: { sort: "DSC" } })
+          }
+          className="radio"
+        >
+          <input
+            type="radio"
+            value="highToLow"
+            name="price"
+            checked={sort === "DSC"}
+          />
+          <span className="radio_text">Price- High to low</span>
+        </label>
+          
+            </li>
+              <li>
+        <label
+          onClick={() =>
+            Dispatch({ type: "SORT_FILTER", payload: { sort: "ASC" } })
+          }
+          className="radio"
+        >
+          <input
+            type="radio"
+            value="lowToHigh"
+            name="price"
+            checked={sort === "ASC"}
+          />
+          <span className="radio_text">Price: Low to High</span>
+        </label>
         </li>
 
-        <li>
-            <input type="radio" className="sidebar-price sidebar-price-high-to-low" name="price" value="price-sort"/>
-            <label>High to Low</label>
-        </li>
         </ul>
+
+
 
         <h1 className="sidebar-margin">Price Range</h1>
         <ul className="sidebar-components-margin">
-        <li>
-        <input type="radio" className="sidebar-price-ranging price-range-below-100" name="price-ranging" value="price-range"/>
-        <label >Below 100</label>
-        </li>
+        <input
+              onChange={(e) => {
+                Dispatch({
+                  type: "RANGE_FILTER",
+                  payload: { maxPrice: e.target.value },
+                });
+              }}
+              type="range"
+              min="0"
+              max="30"
+              value={price}
+              className="rangeSlider"
+            />
 
+        </ul>
+
+
+
+
+        <h1 className="sidebar-margin">Rating</h1>
+        <ul className="sidebar-components-margin">
         <li>
-        <input type="radio" className="sidebar-price-ranging price-range-btw-100-500" name="price-ranging" value="price-range"/>
-        <label >100 to 500</label>
-        </li>
-        <li>
-        <input type="radio" className="sidebar-price-ranging price-range-btw-500-1000" name="price-ranging" value="price-range"/>
-        <label >500 to 1000</label>
-        </li>
-        <li>
-        <input type="radio" className="sidebar-price-ranging price-range-btw-1000-1500" name="price-ranging" value="price-range"/>
-        <label >1000 to 1500</label>
-        </li>
-        <li>
-        <input type="radio" className="sidebar-price-ranging price-range-btw-1500-2000" name="price-ranging" value="price-range"/>
-        <label >1500 to 2000</label>
-        </li>
+        <span
+              onClick={() =>
+                Dispatch({
+                  type: "RATING_FILTER",
+                  payload: { rating: 1 },
+                })
+              }
               
+            >
+              1 <AiTwotoneStar /> 
+           </span>
+           </li>
+           <li>
+        <span
+              onClick={() =>
+                Dispatch({
+                  type: "RATING_FILTER",
+                  payload: { rating: 2 },
+                })
+              }
+              
+            >
+              2 <AiTwotoneStar /> <AiTwotoneStar /> 
+           </span>
+           </li>
+        
         <li>
-        <input type="radio" className="sidebar-price-ranging price-range-btw-2000-2500" name="price-ranging" value="price-range"/>
-        <label >2000 to 2500</label>
-        </li>
+        <span
+              onClick={() =>
+                Dispatch({
+                  type: "RATING_FILTER",
+                  payload: { rating: 3 },
+                })
+              }
+              
+            >
+              3 <AiTwotoneStar /> <AiTwotoneStar /> <AiTwotoneStar /> 
+           </span>
+           </li>
         <li>
-        <input type="radio" className="sidebar-price-ranging price-range-above-2500" name="price-ranging" value="price-range"/>
-        <label >2500 and Above</label>
-        </li>
+        <span
+              onClick={() =>
+                Dispatch({
+                  type: "RATING_FILTER",
+                  payload: { rating: 4 },
+                })
+              }
+              
+            >
+              4 <AiTwotoneStar /> <AiTwotoneStar /> <AiTwotoneStar /> <AiTwotoneStar /> 
+           </span>
+           </li>
+
+            <li>
+        <span
+              onClick={() =>
+                Dispatch({
+                  type: "RATING_FILTER",
+                  payload: { rating: 5 },
+                })
+              }
+              
+            >
+              5 <AiTwotoneStar /> <AiTwotoneStar /> <AiTwotoneStar /> <AiTwotoneStar /> <AiTwotoneStar />
+           </span>
+           </li>
         </ul>
 
 
@@ -66,37 +155,156 @@ function SideBar() {
         <h1 className="sidebar-margin">Category</h1>
         <ul className="sidebar-components-margin">
         <li>
-        <input type="checkbox" className="sidebar-price-ranging price-range-below-100" name="price-ranging" value="price-range"/>
-        <label >Fruits And Vegetables</label>
+        <label for="grocery" className="sidebar-price-ranging">
+          <input
+            onChange={() =>
+              Dispatch({
+                type: "TOGGLE_CATEGORY",
+                payload: { category: "bakery" },
+              })
+            }
+            type="checkbox"
+            name="Bakery"
+            value="Bakery"
+            checked={category.includes("bakery")}
+          />
+          <span className="chechbox_text">Bakery</span>
+        </label>
         </li>
 
         <li>
-        <input type="checkbox" className="sidebar-price-ranging price-range-btw-100-500" name="price-ranging" value="price-range"/>
-        <label >Dairy And Egg</label>
+        <label for="Canvas" className="sidebar-price-ranging">
+          <input
+            onChange={() =>
+              Dispatch({
+                type: "TOGGLE_CATEGORY",
+                payload: { category: "vegetable" },
+              })
+            }
+            type="checkbox"
+            name="vegetables"
+            value="vegetables"
+            checked={category.includes("vegetable")}
+          />
+          <span className="chechbox_text">Fruits And Vegetables</span>
+        </label>
         </li>
+
+
+
         <li>
-        <input type="checkbox" className="sidebar-price-ranging price-range-btw-500-1000" name="price-ranging" value="price-range"/>
-        <label >Breakafast And instant food</label>
+        <label for="Canvas" className="checkbox">
+          <input
+            onChange={() =>
+              Dispatch({
+                type: "TOGGLE_CATEGORY",
+                payload: { category: "juice" },
+              })
+            }
+            type="checkbox"
+            name="Juice"
+            value="Juice"
+            checked={category.includes("juice")}
+          />
+          <span className="chechbox_text">Juice</span>
+        </label>
         </li>
+
         <li>
-        <input type="checkbox" className="sidebar-price-ranging price-range-btw-1000-1500" name="price-ranging" value="price-range"/>
-        <label >Bakery Products</label>
+        <label for="Canvas" className="checkbox">
+          <input
+            onChange={() =>
+              Dispatch({
+                type: "TOGGLE_CATEGORY",
+                payload: { category: "Home" },
+              })
+            }
+            type="checkbox"
+            name="Home"
+            value="Home"
+            checked={category.includes("Home")}
+          />
+          <span className="chechbox_text">Home Essential</span>
+        </label>
         </li>
+
         <li>
-        <input type="checkbox" className="sidebar-price-ranging price-range-btw-1500-2000" name="price-ranging" value="price-range"/>
-        <label >Snacks</label>
+        <label for="Canvas" className="checkbox">
+          <input
+            onChange={() =>
+              Dispatch({
+                type: "TOGGLE_CATEGORY",
+                payload: { category: "breakfast" },
+              })
+            }
+            type="checkbox"
+            name="breakfast"
+            value="breakfast"
+            checked={category.includes("breakfast")}
+          />
+          <span className="chechbox_text">breakfast Essential</span>
+        </label>
         </li>
-              
+  
+
         <li>
-        <input type="checkbox" className="sidebar-price-ranging price-range-btw-2000-2500" name="price-ranging" value="price-range"/>
-        <label >Cold drinks and juices</label>
+        <label for="Canvas" className="checkbox">
+          <input
+            onChange={() =>
+              Dispatch({
+                type: "TOGGLE_CATEGORY",
+                payload: { category: "snacks" },
+              })
+            }
+            type="checkbox"
+            name="snacks"
+            value="snacks"
+            checked={category.includes("snacks")}
+          />
+          <span className="chechbox_text">Snacks</span>
+        </label>
         </li>
+
+
         <li>
-        <input type="checkbox" className="sidebar-price-ranging price-range-above-2500" name="price-ranging" value="price-range"/>
-        <label >Sweets</label>
+        <label for="Canvas" className="checkbox">
+          <input
+            onChange={() =>
+              Dispatch({
+                type: "TOGGLE_CATEGORY",
+                payload: { category: "healthy" },
+              })
+            }
+            type="checkbox"
+            name="healthy"
+            value="healthy"
+            checked={category.includes("healthy")}
+          />
+          <span className="chechbox_text">Healthy</span>
+        </label>
+        </li>
+
+        <li>
+        <label for="Canvas" className="checkbox">
+          <input
+            onChange={() =>
+              Dispatch({
+                type: "TOGGLE_CATEGORY",
+                payload: { category: "pulse" },
+              })
+            }
+            type="checkbox"
+            name="pulse"
+            value="pulse"
+            checked={category.includes("pulse")}
+          />
+          <span className="chechbox_text">Rice And Dal</span>
+        </label>
         </li>
         </ul>
-  
+
+
+       
     </div>
 
 
