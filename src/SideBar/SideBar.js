@@ -14,15 +14,12 @@ function SideBar() {
 
         <div className="main-menu">
 
-
-
-
         <h1>Sort by Price</h1>
         <ul className="sidebar-components-margin">
           <li>
         <label
           onClick={() =>
-            Dispatch({ type: "SORT_FILTER", payload: { sort: "DSC" } })
+            Dispatch({ type: "SORT_FILTER", payload: { sort: "LOW_TO_HIGH" } })
           }
           className="radio"
         >
@@ -30,7 +27,7 @@ function SideBar() {
             type="radio"
             value="highToLow"
             name="price"
-            checked={sort === "DSC"}
+            checked={sort === "LOW_TO_HIGH"}
           />
           <span className="radio_text">Price- High to low</span>
         </label>
@@ -39,7 +36,7 @@ function SideBar() {
               <li>
         <label
           onClick={() =>
-            Dispatch({ type: "SORT_FILTER", payload: { sort: "ASC" } })
+            Dispatch({ type: "SORT_FILTER", payload: { sort: "HIGH_TO_LOW" } })
           }
           className="radio"
         >
@@ -47,7 +44,7 @@ function SideBar() {
             type="radio"
             value="lowToHigh"
             name="price"
-            checked={sort === "ASC"}
+            checked={sort === "HIGH_TO_LOW"}
           />
           <span className="radio_text">Price: Low to High</span>
         </label>
@@ -74,9 +71,6 @@ function SideBar() {
             />
 
         </ul>
-
-
-
 
         <h1 className="sidebar-margin">Rating</h1>
         <ul className="sidebar-components-margin">
@@ -155,7 +149,7 @@ function SideBar() {
         <h1 className="sidebar-margin">Category</h1>
         <ul className="sidebar-components-margin">
         <li>
-        <label for="grocery" className="sidebar-price-ranging">
+        <label  className="sidebar-price-ranging">
           <input
             onChange={() =>
               Dispatch({
@@ -173,7 +167,7 @@ function SideBar() {
         </li>
 
         <li>
-        <label for="Canvas" className="sidebar-price-ranging">
+        <label  className="sidebar-price-ranging" >
           <input
             onChange={() =>
               Dispatch({
@@ -193,7 +187,7 @@ function SideBar() {
 
 
         <li>
-        <label for="Canvas" className="checkbox">
+        <label   className="sidebar-price-ranging">
           <input
             onChange={() =>
               Dispatch({
@@ -211,7 +205,7 @@ function SideBar() {
         </li>
 
         <li>
-        <label for="Canvas" className="checkbox">
+        <label  className="sidebar-price-ranging">
           <input
             onChange={() =>
               Dispatch({
@@ -229,7 +223,7 @@ function SideBar() {
         </li>
 
         <li>
-        <label for="Canvas" className="checkbox">
+        <label  className="sidebar-price-ranging">
           <input
             onChange={() =>
               Dispatch({
@@ -248,7 +242,7 @@ function SideBar() {
   
 
         <li>
-        <label for="Canvas" className="checkbox">
+        <label  className="sidebar-price-ranging">
           <input
             onChange={() =>
               Dispatch({
@@ -267,7 +261,7 @@ function SideBar() {
 
 
         <li>
-        <label for="Canvas" className="checkbox">
+        <label   className="sidebar-price-ranging">
           <input
             onChange={() =>
               Dispatch({
@@ -285,7 +279,7 @@ function SideBar() {
         </li>
 
         <li>
-        <label for="Canvas" className="checkbox">
+        <label  className="sidebar-price-ranging">
           <input
             onChange={() =>
               Dispatch({
