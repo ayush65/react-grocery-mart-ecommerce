@@ -1,7 +1,7 @@
 import React from "react";
 import './SideBar.css'
 import { AiTwotoneStar } from "react-icons/ai";
-import { useFilter } from "../context/filter-context";
+import { useFilter } from "../../context/filter-context";
 
 
 function SideBar() {
@@ -293,6 +293,23 @@ function SideBar() {
             checked={category.includes("pulse")}
           />
           <span className="chechbox_text">Rice And Dal</span>
+        </label>
+        </li>
+        <li>
+        <label  className="sidebar-price-ranging">
+          <input
+            onChange={() =>
+              Dispatch({
+                type: "TOGGLE_CATEGORY",
+                payload: { category: "medicine" },
+              })
+            }
+            type="checkbox"
+            name="medicine"
+            value="medicine"
+            checked={category.includes("medicine")}
+          />
+          <span className="chechbox_text">Medicine</span>
         </label>
         </li>
         </ul>

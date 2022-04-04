@@ -1,5 +1,6 @@
 import "./App.css";
 import RoutesPath from "./AllRoutes/RoutesPath";
+import Mockman from "mockman-js";
 
 function App() {
   return (

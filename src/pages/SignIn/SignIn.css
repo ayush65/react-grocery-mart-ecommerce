@@ -1,0 +1,60 @@
+.login-page-component{
+    position: absolute;
+    top: 25%;
+    left: 42%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    gap:1rem;
+}
+.input{
+    margin-top: 6rem;
+}
+.input-margin{
+    margin-top: 2rem;
+}
+.simple-button{
+    position: absolute;
+    top: 130%;
+    left: 50%;
+    width: 30%;
+}
+.button-login{
+    top: 94%;
+    left: 30%;
+}
+.Signin-container{
+    position: absolute;
+    top: 57%;
+    left: 42%;
+}
+.input-box{
+    height: 3;
+    width: 100%;
+    font-size: 1.5rem;
+}
+.form-text{
+    font-size: 1.5rem;
+    margin: 1rem;
+}
+.form-button{
+    margin: 1rem;
+    font-size: 1.5rem;
+    color: var(--white);
+    background-color: var(--primary-color);
+    padding: 1rem;
+    text-decoration: none;
+    
+}
+@media screen and (max-width: 492px) {
+    .login-page-component{
+        position: absolute;
+        left: 1rem;
+     }
+     .simple-button{
+         position: absolute;
+         top: 18rem;
+         left: 3rem;
+     }
+
+ }

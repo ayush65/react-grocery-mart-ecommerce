@@ -1,4 +1,4 @@
-@import url('../../Colors/Color.css');
+@import url('../../../Colors/Color.css');
 
 *, *::before, *::after {
     font-family: 'Open Sans', sans-serif;
