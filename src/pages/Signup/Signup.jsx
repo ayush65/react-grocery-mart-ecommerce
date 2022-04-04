@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { Navbar } from '../Homepage-components';
 import './Signup.css'
 
-function Signup() {
+const Signup =  () => {
   return (
       
     <div className="signup-container">
@@ -59,4 +59,4 @@ function Signup() {
   )
 }
 
-export default Signup
+export {Signup}

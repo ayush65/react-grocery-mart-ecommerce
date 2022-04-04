@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { Navbar } from '../Homepage-components'
 import './LandingPage.css'
 
-function LandingPage() {
+const  LandingPage = () => {
   return (
     <>
     <Navbar/>
@@ -19,4 +19,4 @@ function LandingPage() {
   )
 }
 
-export default LandingPage
+export {LandingPage}

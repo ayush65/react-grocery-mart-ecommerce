@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { Navbar } from '../Homepage-components'
 import './Logout.css'
 
-function Logout() {
+const Logout = () => { 
   return (
     <>
     <Navbar/>
@@ -15,4 +15,4 @@ function Logout() {
   )
 }
 
-export default Logout
+export {Logout}

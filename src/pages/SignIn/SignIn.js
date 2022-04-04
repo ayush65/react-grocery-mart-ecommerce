@@ -5,7 +5,7 @@ import { useState } from "react";
 import { useAuth } from "../../context/auth-context";
 import { Link } from 'react-router-dom'
 
-function SignIn() {
+const SignIn = () => {
     const { userState, userDispatch, loginUser } = useAuth();
     const [formData, setFormData] = useState({
       email: "",
@@ -106,4 +106,4 @@ function SignIn() {
   )
 }
 
-export default SignIn
+export {SignIn}
