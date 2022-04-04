@@ -4,8 +4,11 @@ import { BsFillHeartFill , BsFillCartFill , BsPersonCircle} from "react-icons/bs
 import { GiHamburgerMenu } from "react-icons/gi";
 import { Link } from 'react-router-dom'
 
+
 const  Navbar = () => {
     const [showMediaIcons, setShowMediaIcons] = useState(false);
+
+
 
   return (
     <>
@@ -40,10 +43,12 @@ const  Navbar = () => {
                     
                 </li>
                 <li className="navbar-links icons-align">
-                    <Link to="" className="icon-size"><BsPersonCircle /></Link>
+                    <Link to="/logout" className="icon-size"><BsPersonCircle /></Link>
                 </li>
+
             </ul>
         </div>
+
         <div className="hamburger-menu">
             <Link to="" className="icon-size" onClick={() => setShowMediaIcons(!showMediaIcons)}>
               <GiHamburgerMenu />

@@ -57,6 +57,7 @@ export const categories = [
       "Masala essential",
       alt: "masala-essential-image",
   },
+  
 
 
 ];

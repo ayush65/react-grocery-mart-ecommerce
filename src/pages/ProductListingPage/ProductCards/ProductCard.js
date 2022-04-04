@@ -1,7 +1,7 @@
 import React from 'react'
 import './ProductCard.css';
 
-import { useFilter } from "../../context/filter-context";
+import { useFilter } from "../../../context/filter-context";
 
 function ProductCard() {
 

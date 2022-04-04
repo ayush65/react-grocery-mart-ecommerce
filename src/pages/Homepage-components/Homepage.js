@@ -6,7 +6,7 @@ import {
   Footer
   } from '../Homepage-components/index'
   
-function Homepage() {
+const  Homepage = () => {
   return (
     <>
         <Navbar />
@@ -18,4 +18,4 @@ function Homepage() {
   )
 }
 
-export default Homepage
+export {Homepage}

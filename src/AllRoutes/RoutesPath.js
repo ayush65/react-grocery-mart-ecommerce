@@ -3,15 +3,25 @@ import {
   Routes,
   Route
 } from "react-router-dom";
-import Homepage from '../Homepage-components/Homepage';
-import ProductListing from '../ProductListingPage/ProductListing';
+import { Homepage ,
+  LandingPage ,
+  Logout ,
+  ProductListing ,
+  SignIn ,
+  Signup} from '../pages/index';
+import Mockman from "mockman-js";
 
 function RoutesPath() {
   return (
     <>
       <Routes>
+      <Route path="/mockman" element={ <Mockman />}></Route>  
+      <Route path="/signin" element={ <SignIn /> }></Route>
+      <Route path="/logout" element={<Logout/>}></Route>
+      <Route path="/signup" element={ <Signup /> }></Route>
       <Route path="/productListing" element={<ProductListing/>} />
-      <Route exact path="/" element={<Homepage />} />
+      <Route  path="/products" element={<Homepage />} />
+      <Route exact path="/" element={ <LandingPage /> }></Route>
     </Routes>
 
     </>

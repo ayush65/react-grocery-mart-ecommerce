@@ -1,7 +1,7 @@
 import React from 'react'
 import {  Navbar } from '../Homepage-components'
 import SideBar from '../SideBar/SideBar'
-import ProductCard from './ProductCards/ProductCard'
+import ProductCard from '../ProductListingPage/ProductCards/ProductCard'
 
 
 const  ProductListing = () => {
@@ -15,4 +15,4 @@ const  ProductListing = () => {
   )
 }
 
-export default ProductListing
+export {ProductListing}

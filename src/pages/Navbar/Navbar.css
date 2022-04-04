@@ -23,7 +23,11 @@ html {
 .navbar-components{
     grid-column: 4/5;
 }
-
+.navbar-links-signout{
+    position: absolute;
+    top: 5%;
+    right: 0.5%;
+}
 .navbar-list-links{
     height: 10rem;
     display: flex;
