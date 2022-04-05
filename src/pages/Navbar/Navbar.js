@@ -36,7 +36,7 @@ const  Navbar = () => {
         <div className="navbar-components">
             <ul className="navbar-list-links-components"> 
                 <li className="navbar-links icons-align">
-                    <Link to="" className="icon-size"><BsFillHeartFill/></Link>
+                    <Link to="/wishlist" className="icon-size"><BsFillHeartFill/></Link>
                 </li>
                 <li className="navbar-links icons-align">
                     <Link to="/cart" className="icon-size"><BsFillCartFill/></Link>

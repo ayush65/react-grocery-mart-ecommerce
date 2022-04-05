@@ -38,16 +38,22 @@ function CardCart({item}) {
                     <button onClick={() => removeItems()} className="cart-items-button">-</button>
                 </div>
 
-                <button className="btn-product-card cart-btn">Add To Wishlist</button>
-        <button
-          onClick={() =>
-            dispatch({
-              type: "REMOVE_FROM_CART",
-              payload: { itemId: _id },
-            })
-          }
-          class="btn-product-card cart-btn"
-        >Remove from Cart</button>
+                <button className="btn-product-card cart-btn"
+                          onClick={() =>
+                            dispatch({
+                              type: "ADD_TO_WISHLIST",
+                              payload: { itemId: item._id },
+                            })
+                          }>Add To Wishlist</button>
+                <button
+                   onClick={() =>
+                      dispatch({
+                       type: "REMOVE_FROM_CART",
+                        payload: { itemId: _id },
+                       })
+                    }
+                     class="btn-product-card cart-btn"
+                  >Remove from Cart</button>
 
               </div>
     </div>
