@@ -19,3 +19,21 @@
 .cart-container{
    margin-left: 10%;
 }
+.card-items-number{
+    display: flex;
+}
+.cart-items-button{
+    width: 100%;
+    height: 20%;
+    font-size: 2.5rem;
+    margin-top: 7rem;
+    background: var(--primary-color);
+    color: var(--white);
+    width: 5rem;
+    border: none;
+}
+.cart-item-number-text{
+    margin-top: 3.1rem;
+    color: var(--primary-color);
+    padding: 1rem;
+}

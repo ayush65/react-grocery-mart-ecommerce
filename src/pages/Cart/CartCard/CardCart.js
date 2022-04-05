@@ -1,11 +1,22 @@
-import React from 'react'
+import React,{useState} from 'react'
 import { useFilter } from "../../../context/filter-context";
 import "./CartCard.css"
 
 function CardCart({item}) {
     const { Dispatch } = useFilter();
     const { _id, itemName, price, imgUrl, alt} = item;
+    const [itemsNumber , SetItemNumber] = useState(1);
 
+    const addItems = () => {
+        SetItemNumber(itemsNumber + 1);
+    }
+
+    const removeItems = () => {
+        if(itemsNumber == 1){
+            return itemsNumber;
+        }
+        SetItemNumber(itemsNumber - 1);
+    }
     
   return (
     <>
@@ -21,6 +32,12 @@ function CardCart({item}) {
                 <h1 className="card-body cart-item-align">
                   Rs{price}
                 </h1>
+                <div className="card-items-number">
+                    <button onClick={() => addItems()} className="cart-items-button">+</button>
+                    <h1 className="cart-item-number-text">  {itemsNumber}  </h1>
+                    <button onClick={() => removeItems()} className="cart-items-button">-</button>
+                </div>
+
                 <button className="btn-product-card cart-btn">Add To Wishlist</button>
         <button
           onClick={() =>
