@@ -8,14 +8,16 @@ import { Homepage ,
   Logout ,
   ProductListing ,
   SignIn ,
-  Signup} from '../pages/index';
+  Signup,
+Cart} from '../pages/index';
 import Mockman from "mockman-js";
 
 function RoutesPath() {
   return (
     <>
       <Routes>
-      <Route path="/mockman" element={ <Mockman />}></Route>  
+      <Route path="/mockman" element={ <Mockman />}></Route> 
+      <Route path="/cart" element={<Cart />}></Route> 
       <Route path="/signin" element={ <SignIn /> }></Route>
       <Route path="/logout" element={<Logout/>}></Route>
       <Route path="/signup" element={ <Signup /> }></Route>

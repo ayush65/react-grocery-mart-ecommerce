@@ -9,6 +9,8 @@ export const products = [
     price: "50",
     category: "Bakery",
     rating:1,
+    isWishlisted: false,
+    isAddedToCart: false,
   },
   {
     _id: uuid(),
@@ -17,6 +19,8 @@ export const products = [
     price: "60",
     category: "bakery",
     rating:2,
+    isWishlisted: false,
+    isAddedToCart: false,
   },
   {
     _id: uuid(),
@@ -25,6 +29,8 @@ export const products = [
     price: "185",
     category: "pulse",
     rating:4,
+    isWishlisted: false,
+    isAddedToCart: false,
   },
   {
     _id: uuid(),
@@ -33,6 +39,8 @@ export const products = [
     price: "35",
     category: "vegetable",
     rating:2,
+    isWishlisted: false,
+    isAddedToCart: false,
   },
   {
     _id: uuid(),
@@ -41,6 +49,8 @@ export const products = [
     price: "20",
     category: "vegetable",
     rating:1,
+    isWishlisted: false,
+    isAddedToCart: false,
   },
   {
     _id: uuid(),
@@ -49,6 +59,8 @@ export const products = [
     price: "20",
     category: "vegetable",
     rating:3,
+    isWishlisted: false,
+    isAddedToCart: false,
   },
   {
     _id: uuid(),
@@ -57,6 +69,8 @@ export const products = [
     price: "15",
     category: "vegetable",
     rating:5,
+    isWishlisted: false,
+    isAddedToCart: false,
   },
   {
     _id: uuid(),
@@ -65,6 +79,8 @@ export const products = [
     price: "50",
     category: "vegetable",
     rating:1,
+    isWishlisted: false,
+    isAddedToCart: false,
   },
   {
     _id: uuid(),
@@ -73,6 +89,8 @@ export const products = [
     price: "17",
     category: "vegetable",
     rating:5,
+    isWishlisted: false,
+    isAddedToCart: false,
   },
   {
     _id: uuid(),
@@ -81,6 +99,8 @@ export const products = [
     price: "90",
     category: "bakery",
     rating:4,
+    isWishlisted: false,
+    isAddedToCart: false,
   },
   {
     _id: uuid(),
@@ -89,6 +109,8 @@ export const products = [
     price: "500",
     category: "bakery",
     rating:5,
+    isWishlisted: false,
+    isAddedToCart: false,
   },
   {
     _id: uuid(),
@@ -97,6 +119,8 @@ export const products = [
     price: "32",
     category: "bakery",
     rating:2,
+    isWishlisted: false,
+    isAddedToCart: false,
   },
   {
     _id: uuid(),
@@ -105,6 +129,8 @@ export const products = [
     price: "250",
     category: "bakery",
     rating:1,
+    isWishlisted: false,
+    isAddedToCart: false,
   },
   {
     _id: uuid(),
@@ -113,6 +139,8 @@ export const products = [
     price: "22",
     category: "juice",
     rating:3,
+    isWishlisted: false,
+    isAddedToCart: false,
   },
   {
     _id: uuid(),
@@ -121,6 +149,8 @@ export const products = [
     price: "22",
     category: "juice",
     rating:1,
+    isWishlisted: false,
+    isAddedToCart: false,
   },
   {
     _id: uuid(),
@@ -129,6 +159,8 @@ export const products = [
     price: "95",
     category: "Home",
     rating:4,
+    isWishlisted: false,
+    isAddedToCart: false,
   },
   {
     _id: uuid(),
@@ -137,6 +169,8 @@ export const products = [
     price: "35",
     category: "medicine",
     rating:5,
+    isWishlisted: false,
+    isAddedToCart: false,
   },
   {
     _id: uuid(),
@@ -145,6 +179,8 @@ export const products = [
     price: "19",
     category: "medicine",
     rating:1,
+    isWishlisted: false,
+    isAddedToCart: false,
   },
   {
     _id: uuid(),
@@ -153,6 +189,8 @@ export const products = [
     price: "45",
     category: "medicine",
     rating:2,
+    isWishlisted: false,
+    isAddedToCart: false,
   },
   {
     _id: uuid(),
@@ -161,6 +199,8 @@ export const products = [
     price: "6",
     category: "medicine",
     rating:4,
+    isWishlisted: false,
+    isAddedToCart: false,
   },
   {
     _id: uuid(),
@@ -169,6 +209,8 @@ export const products = [
     price: "112",
     category: "pulse",
     rating:4,
+    isWishlisted: false,
+    isAddedToCart: false,
   },
   {
     _id: uuid(),
@@ -177,6 +219,8 @@ export const products = [
     price: "45",
     category: "pulse",
     rating:5,
+    isWishlisted: false,
+    isAddedToCart: false,
   },
   {
     _id: uuid(),
@@ -185,6 +229,8 @@ export const products = [
     price: "80",
     category: "healthy",
     rating:2,
+    isWishlisted: false,
+    isAddedToCart: false,
   },
   {
     _id: uuid(),
@@ -193,6 +239,8 @@ export const products = [
     price: "450",
     category: "healthy",
     rating:3,
+    isWishlisted: false,
+    isAddedToCart: false,
   },
   {
     _id: uuid(),
@@ -201,6 +249,8 @@ export const products = [
     price: "80",
     category: "sweets",
     rating:5,
+    isWishlisted: false,
+    isAddedToCart: false,
   },
   {
     _id: uuid(),
@@ -209,6 +259,8 @@ export const products = [
     price: "1000",
     category: "sweets",
     rating:1,
+    isWishlisted: false,
+    isAddedToCart: false,
   },
   {
     _id: uuid(),
@@ -217,6 +269,8 @@ export const products = [
     price: "250",
     category: "sweets",
     rating:2,
+    isWishlisted: false,
+    isAddedToCart: false,
   },
   {
     _id: uuid(),
@@ -225,6 +279,8 @@ export const products = [
     price: "95",
     category: "sweets",
     rating:3,
+    isWishlisted: false,
+    isAddedToCart: false,
   },
   {
     _id: uuid(),
@@ -233,6 +289,8 @@ export const products = [
     price: "105",
     category: "Home",
     rating:4,
+    isWishlisted: false,
+    isAddedToCart: false,
   },
   {
     _id: uuid(),
@@ -241,6 +299,8 @@ export const products = [
     price: "20",
     category: "snacks",
     rating:5,
+    isWishlisted: false,
+    isAddedToCart: false,
   },
   {
     _id: uuid(),
@@ -249,6 +309,8 @@ export const products = [
     price: "95",
     category: "breakfast",
     rating:1,
+    isWishlisted: false,
+    isAddedToCart: false,
   },
   {
     _id: uuid(),
@@ -257,6 +319,8 @@ export const products = [
     price: "65",
     category: "breakfast",
     rating:5,
+    isWishlisted: false,
+    isAddedToCart: false,
   },
   {
     _id: uuid(),
@@ -265,6 +329,8 @@ export const products = [
     price: "165",
     category: "pulse",
     rating:5,
+    isWishlisted: false,
+    isAddedToCart: false,
   },
   {
     _id: uuid(),
@@ -273,6 +339,8 @@ export const products = [
     price: "30",
     category: "healthy",
     rating:4,
+    isWishlisted: false,
+    isAddedToCart: false,
   },
   {
     _id: uuid(),
@@ -281,6 +349,8 @@ export const products = [
     price: "100",
     category: "healthy",
     rating:3,
+    isWishlisted: false,
+    isAddedToCart: false,
   },
   {
     _id: uuid(),
@@ -289,6 +359,8 @@ export const products = [
     price: "60",
     category: "snacks",
     rating:5,
+    isWishlisted: false,
+    isAddedToCart: false,
   },
   
 ];

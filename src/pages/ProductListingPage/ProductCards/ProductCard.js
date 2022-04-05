@@ -1,15 +1,14 @@
 import React from 'react'
 import './ProductCard.css';
-
 import { useFilter } from "../../../context/filter-context";
 
 function ProductCard() {
 
   const { State } = useFilter();
-  
+  const { Dispatch } = useFilter();
+
   return (
     <div>
-
 <div className="product-container">
 <div className="card-grid">{
             State.product.map((item) => {
@@ -23,16 +22,23 @@ function ProductCard() {
                 <h1 className="card-body">
                   Rs  {item.price}
                 </h1>
-                <button className="btn-product-card">Add To Cart</button>
-                <button className="btn-product-card">Add To Wishlist</button>
+                
+                <button
+        onClick={() => Dispatch({
+                type: "ADD_TO_CART",
+                payload: { itemId: item._id },
+              })
+        }
+        className="btn-product-card"
+      >Add To Cart
+      </button>
+      <button className="btn-product-card">Add To Wishlist</button>
               </div>
             })
     }
     </div>
-
 </div>
-
-    </div>
+</div>
   )
 }
 
