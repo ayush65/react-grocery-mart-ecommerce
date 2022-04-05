@@ -12,7 +12,7 @@ function CardCart({item}) {
     }
 
     const removeItems = () => {
-        if(itemsNumber == 1){
+        if(itemsNumber === 1){
             return itemsNumber;
         }
         SetItemNumber(itemsNumber - 1);
