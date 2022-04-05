@@ -39,7 +39,7 @@ const  Navbar = () => {
                     <Link to="" className="icon-size"><BsFillHeartFill/></Link>
                 </li>
                 <li className="navbar-links icons-align">
-                    <Link to="" className="icon-size"><BsFillCartFill/></Link>
+                    <Link to="/cart" className="icon-size"><BsFillCartFill/></Link>
                     
                 </li>
                 <li className="navbar-links icons-align">

@@ -42,6 +42,40 @@ const filterReducer = (filterState, action) => {
           ],
         };
         break;
+        
+        case "ADD_TO_CART":
+          filterStateCopy = {
+            ...filterStateCopy,
+            product: [
+              ...filterStateCopy.product.map((item) =>
+                item._id === action.payload.itemId
+                  ? { ...item, isAddedToCart: true }
+                  : item
+              ),
+            ],
+          };
+          filterStateCopy = {
+            ...filterStateCopy,
+            default: [...filterStateCopy.product],
+          };
+          break;
+    
+        case "REMOVE_FROM_CART":
+          filterStateCopy = {
+            ...filterStateCopy,
+            product: [
+              ...filterStateCopy.product.map((item) =>
+                item._id === action.payload.itemId
+                  ? { ...item, isAddedToCart: false }
+                  : item
+              ),
+            ],
+          };
+          filterStateCopy = {
+            ...filterStateCopy,
+            default: [...filterStateCopy.product],
+          };
+          break;
   
       case "RATING_FILTER":
         filterStateCopy = {

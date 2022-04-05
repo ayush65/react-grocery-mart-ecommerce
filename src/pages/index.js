@@ -4,5 +4,6 @@ import {Logout} from '../pages/Logout/Logout';
 import {ProductListing} from '../pages/ProductListingPage/ProductListing';
 import {SignIn} from '../pages/SignIn/SignIn';
 import {Signup} from '../pages/Signup/Signup';
+import {Cart} from "./Cart/Cart"
 
-export  { Homepage , LandingPage , Logout , ProductListing  , SignIn  ,Signup }
+export  { Homepage , LandingPage , Logout , ProductListing  , SignIn  ,Signup , Cart}

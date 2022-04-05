@@ -5,7 +5,7 @@ import {filterReducer} from '../reducer/filter-reducer'
 
 const FilterContext = createContext(null);
 const FilterProvider = ({ children }) => {
-  const [State, Dispatch] = useReducer(filterReducer, {
+  const [state, dispatch] = useReducer(filterReducer, {
     product: [],
     price: 50,
     category: [],
@@ -16,7 +16,7 @@ const FilterProvider = ({ children }) => {
   useEffect(() => {
     (async () => {
       let response = await axios.get("/api/products");
-      Dispatch({
+      dispatch({
         type: "UPDATE_PRODUCTS",
         payload: { products: response.data.products },
       });
@@ -24,7 +24,7 @@ const FilterProvider = ({ children }) => {
   }, []);
 
   return (
-    <FilterContext.Provider value={{ State, Dispatch }}>
+    <FilterContext.Provider value={{ state, dispatch }}>
       {children}
     </FilterContext.Provider>
   );
