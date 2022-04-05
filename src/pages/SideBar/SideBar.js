@@ -6,8 +6,8 @@ import { useFilter } from "../../context/filter-context";
 
 function SideBar() {
 
-  const { State, Dispatch } = useFilter();
-  const { price, category, sort } = State;
+  const { state, dispatch } = useFilter();
+  const { price, category, sort } = state;
 
   return (
     <>
@@ -19,7 +19,7 @@ function SideBar() {
           <li>
         <label
           onClick={() =>
-            Dispatch({ type: "SORT_FILTER", payload: { sort: "LOW_TO_HIGH" } })
+            dispatch({ type: "SORT_FILTER", payload: { sort: "LOW_TO_HIGH" } })
           }
           className="radio"
         >
@@ -36,7 +36,7 @@ function SideBar() {
               <li>
         <label
           onClick={() =>
-            Dispatch({ type: "SORT_FILTER", payload: { sort: "HIGH_TO_LOW" } })
+            dispatch({ type: "SORT_FILTER", payload: { sort: "HIGH_TO_LOW" } })
           }
           className="radio"
         >
@@ -58,7 +58,7 @@ function SideBar() {
         <ul className="sidebar-components-margin">
         <input
               onChange={(e) => {
-                Dispatch({
+                dispatch({
                   type: "RANGE_FILTER",
                   payload: { maxPrice: e.target.value },
                 });
@@ -77,7 +77,7 @@ function SideBar() {
         <li>
         <span
               onClick={() =>
-                Dispatch({
+                dispatch({
                   type: "RATING_FILTER",
                   payload: { rating: 1 },
                 })
@@ -90,7 +90,7 @@ function SideBar() {
            <li>
         <span
               onClick={() =>
-                Dispatch({
+                dispatch({
                   type: "RATING_FILTER",
                   payload: { rating: 2 },
                 })
@@ -104,7 +104,7 @@ function SideBar() {
         <li>
         <span
               onClick={() =>
-                Dispatch({
+                dispatch({
                   type: "RATING_FILTER",
                   payload: { rating: 3 },
                 })
@@ -117,7 +117,7 @@ function SideBar() {
         <li>
         <span
               onClick={() =>
-                Dispatch({
+                dispatch({
                   type: "RATING_FILTER",
                   payload: { rating: 4 },
                 })
@@ -131,7 +131,7 @@ function SideBar() {
             <li>
         <span
               onClick={() =>
-                Dispatch({
+                dispatch({
                   type: "RATING_FILTER",
                   payload: { rating: 5 },
                 })
@@ -152,7 +152,7 @@ function SideBar() {
         <label  className="sidebar-price-ranging">
           <input
             onChange={() =>
-              Dispatch({
+              dispatch({
                 type: "TOGGLE_CATEGORY",
                 payload: { category: "bakery" },
               })
@@ -170,7 +170,7 @@ function SideBar() {
         <label  className="sidebar-price-ranging" >
           <input
             onChange={() =>
-              Dispatch({
+              dispatch({
                 type: "TOGGLE_CATEGORY",
                 payload: { category: "vegetable" },
               })
@@ -190,7 +190,7 @@ function SideBar() {
         <label   className="sidebar-price-ranging">
           <input
             onChange={() =>
-              Dispatch({
+              dispatch({
                 type: "TOGGLE_CATEGORY",
                 payload: { category: "juice" },
               })
@@ -208,7 +208,7 @@ function SideBar() {
         <label  className="sidebar-price-ranging">
           <input
             onChange={() =>
-              Dispatch({
+              dispatch({
                 type: "TOGGLE_CATEGORY",
                 payload: { category: "Home" },
               })
@@ -226,7 +226,7 @@ function SideBar() {
         <label  className="sidebar-price-ranging">
           <input
             onChange={() =>
-              Dispatch({
+              dispatch({
                 type: "TOGGLE_CATEGORY",
                 payload: { category: "breakfast" },
               })
@@ -245,7 +245,7 @@ function SideBar() {
         <label  className="sidebar-price-ranging">
           <input
             onChange={() =>
-              Dispatch({
+              dispatch({
                 type: "TOGGLE_CATEGORY",
                 payload: { category: "snacks" },
               })
@@ -264,7 +264,7 @@ function SideBar() {
         <label   className="sidebar-price-ranging">
           <input
             onChange={() =>
-              Dispatch({
+              dispatch({
                 type: "TOGGLE_CATEGORY",
                 payload: { category: "healthy" },
               })
@@ -282,7 +282,7 @@ function SideBar() {
         <label  className="sidebar-price-ranging">
           <input
             onChange={() =>
-              Dispatch({
+              dispatch({
                 type: "TOGGLE_CATEGORY",
                 payload: { category: "pulse" },
               })
@@ -299,7 +299,7 @@ function SideBar() {
         <label  className="sidebar-price-ranging">
           <input
             onChange={() =>
-              Dispatch({
+              dispatch({
                 type: "TOGGLE_CATEGORY",
                 payload: { category: "medicine" },
               })

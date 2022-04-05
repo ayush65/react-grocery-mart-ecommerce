@@ -4,14 +4,14 @@ import { useFilter } from "../../../context/filter-context";
 
 function ProductCard() {
 
-  const { State } = useFilter();
-  const { Dispatch } = useFilter();
+  const { state } = useFilter();
+  const { dispatch } = useFilter();
 
   return (
     <div>
 <div className="product-container">
 <div className="card-grid">{
-            State.product.map((item) => {
+            state.product.map((item) => {
               return <div key={item._id} className="card card-shadow">
                 <div className="card-header card-image">
                   <img src={item.imgUrl} alt={item.alt}/>
@@ -24,7 +24,7 @@ function ProductCard() {
                 </h1>
                 
                 <button
-        onClick={() => Dispatch({
+        onClick={() => dispatch({
                 type: "ADD_TO_CART",
                 payload: { itemId: item._id },
               })

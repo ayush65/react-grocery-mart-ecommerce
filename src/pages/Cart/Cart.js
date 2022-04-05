@@ -7,8 +7,8 @@ import { useFilter } from "../../context/filter-context";
 
 const  Cart = () => {
 
-  const { State } = useFilter();
-  const cartItems = State.product.filter((item) => item.isAddedToCart);
+  const { state } = useFilter();
+  const cartItems = state.product.filter((item) => item.isAddedToCart);
 
 
 

@@ -3,7 +3,7 @@ import { useFilter } from "../../../context/filter-context";
 import "./CartCard.css"
 
 function CardCart({item}) {
-    const { Dispatch } = useFilter();
+    const { dispatch } = useFilter();
     const { _id, itemName, price, imgUrl, alt} = item;
     const [itemsNumber , SetItemNumber] = useState(1);
 
@@ -41,7 +41,7 @@ function CardCart({item}) {
                 <button className="btn-product-card cart-btn">Add To Wishlist</button>
         <button
           onClick={() =>
-            Dispatch({
+            dispatch({
               type: "REMOVE_FROM_CART",
               payload: { itemId: _id },
             })
