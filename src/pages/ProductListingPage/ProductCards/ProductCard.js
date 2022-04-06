@@ -32,7 +32,16 @@ function ProductCard() {
         className="btn-product-card"
       >Add To Cart
       </button>
-      <button className="btn-product-card">Add To Wishlist</button>
+      <button
+          onClick={() =>
+            dispatch({
+              type: "ADD_TO_WISHLIST",
+              payload: { itemId: item._id },
+            })
+          }
+          class="btn-product-card"
+        >Add to wishlist
+        </button>
               </div>
             })
     }

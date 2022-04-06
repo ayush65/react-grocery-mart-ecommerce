@@ -42,6 +42,23 @@ const filterReducer = (filterState, action) => {
           ],
         };
         break;
+
+        case "ADD_TO_WISHLIST":
+          filterStateCopy = {
+            ...filterStateCopy,
+            product: [
+              ...filterStateCopy.product.map((item) =>
+                item._id === action.payload.itemId
+                  ? { ...item, isWishlisted: !item.isWishlisted }
+                  : item
+              ),
+            ],
+          };
+          filterStateCopy = {
+            ...filterStateCopy,
+            default: [...filterStateCopy.product],
+          };
+          break;
         
         case "ADD_TO_CART":
           filterStateCopy = {
