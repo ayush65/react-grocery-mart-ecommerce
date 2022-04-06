@@ -28,10 +28,8 @@ function WishlistCard({item}) {
                               payload: { itemId: _id },
                             })
                           }>Add To Cart</button>
-
-              </div>
+                          </div>
     </div>
-
 </div>
     </div>
   )
