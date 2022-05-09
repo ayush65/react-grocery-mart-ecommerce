@@ -7,7 +7,7 @@ export const products = [
     itemName: "Bread",
      imgUrl: "https://www.kindpng.com/picc/m/92-924604_sliced-bread-hd-png-download.png",
     price: "50",
-    category: "Bakery",
+    category: "bakery",
     rating:1,
     isWishlisted: false,
     isAddedToCart: false,

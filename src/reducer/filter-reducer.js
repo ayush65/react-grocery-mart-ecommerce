@@ -13,6 +13,7 @@ const filterReducer = (filterState, action) => {
       case "RANGE_FILTER":
         filterStateCopy = {
           ...filterStateCopy,
+
           price: action.payload.maxPrice,
           product: filterStateCopy.default.filter(
             (item) => item.price <= action.payload.maxPrice
@@ -59,6 +60,17 @@ const filterReducer = (filterState, action) => {
             default: [...filterStateCopy.product],
           };
           break;
+
+          case "CLEAR_FILTER":
+            filterStateCopy = {
+              product: filterStateCopy.default,
+              price: 30,
+              category: [],
+              rating: 5,
+              sort: null,
+              default: filterStateCopy.default,
+            };
+            break;  
         
         case "ADD_TO_CART":
           filterStateCopy = {
@@ -116,6 +128,8 @@ const filterReducer = (filterState, action) => {
       default:
         break;
     }
+
+    
   
     if (filterStateCopy.sort !== null && !action.payload.sort) {
       filterStateCopy = {
@@ -139,15 +153,7 @@ const filterReducer = (filterState, action) => {
         ],
       };
     }
-  
-    if (filterStateCopy.price !== 50 && !action.payload.maxPrice) {
-      filterStateCopy = {
-        ...filterStateCopy,
-        product: filterStateCopy.product.filter(
-          (item) => item.price <= filterStateCopy.price
-        ),
-      };
-    }
+
   
     if (filterStateCopy.rating !== 5 && !action.payload.rating) {
       filterStateCopy = {

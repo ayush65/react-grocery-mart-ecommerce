@@ -41,7 +41,7 @@ const SignIn = () => {
     </div>
     {userState.passwordCheck && (
                 <span className="">
-                  *Please check the credentials entered and try again
+                  Please check the credentials entered and try again
                 </span>
               )}
               {userState.userNotFound && (
@@ -96,7 +96,7 @@ const SignIn = () => {
               </button>
             </div>
             <p className="form-text">
-              Don't have an account?{" "}
+              Don't have an account?
               <Link to="/signup">
                 <span className="form-text">Sign up for free</span>
               </Link>

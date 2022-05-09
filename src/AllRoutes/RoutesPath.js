@@ -26,6 +26,7 @@ function RoutesPath() {
       <Route path="/productListing" element={<ProductListing/>} />
       <Route  path="/products" element={<Homepage />} />
       <Route exact path="/" element={ <LandingPage /> }></Route>
+      
     </Routes>
 
     </>

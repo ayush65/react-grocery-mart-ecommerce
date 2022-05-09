@@ -84,9 +84,6 @@ html {
     .navbar-links,.navbar-logo {
       height: 8rem;
     }
-    .hamburger-menu{
-        display: block;
-    }
     .navbar-logo{
         width: 20rem;
     }
@@ -100,7 +97,17 @@ html {
     }
   
     .navbar-list-links,.navbar-list-links-components {
-      display: none;
+      display: block;
+      margin-right: 2rem;
+    }
+    .navbar-list-links-components{
+        display: block;
+        color: #fff;
+        position: absolute;
+        display: flex;
+        
+        right: 1%;
+        top: 3%;
     }
     .navbar-logo {
       height: 7rem;
@@ -143,6 +150,12 @@ html {
     }
     .navbar-links-header{
         font-size: 1rem;
+    }
+    .navbar-list-links{
+        display: none;
+    }
+    .navbar-link-componentss{
+        display: block;
     }
 }
   

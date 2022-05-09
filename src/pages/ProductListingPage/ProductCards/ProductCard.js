@@ -39,7 +39,7 @@ function ProductCard() {
               payload: { itemId: item._id },
             })
           }
-          class="btn-product-card"
+          className="btn-product-card"
         >Add to wishlist
         </button>
               </div>
@@ -48,6 +48,8 @@ function ProductCard() {
     </div>
 </div>
 </div>
+
+
   )
 }
 

@@ -1,4 +1,4 @@
-.main-menu{
+.main-menu1{
     top: 7%;
     height: 100%;
     width: 15%;
@@ -14,3 +14,14 @@
     text-decoration: none;
     list-style: none;
 }
+.btn-clear{
+    background-color: none ;
+    font-size: 2rem;
+    margin-left: 50%;
+}
+@media only screen and (max-width: 500px) {
+    .main-menu1{
+        width: 41%;
+        font-size: 1rem;
+    }
+  }

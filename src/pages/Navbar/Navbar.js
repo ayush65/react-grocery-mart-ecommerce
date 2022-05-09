@@ -16,24 +16,22 @@ const  Navbar = () => {
      <div className="navbar-logo">
              <Link to="/" className="navbar-links-header"><h1>Grocery Mart</h1></Link>
     </div>
-    <div className={
-            showMediaIcons ? "menu-link mobile-menu-link navbar-menu" : "menu-link navbar-menu"
-          }>
+    <div >
             <ul className="navbar-list-links">
 
                 <li className="navbar-links">
-                <Link to="" className="navbar-links">Bakery</Link>
+                <Link to="/productListing" className="navbar-links">Bakery</Link>
                 </li>
                 <li className="navbar-links">
-                    <Link to="" className="navbar-links">Fruits And Vegetables</Link>
+                    <Link to="/productListing" className="navbar-links">Fruits And Vegetables</Link>
                 </li>
                 <li className="navbar-links">
-                <Link to="" className="navbar-links">Home Essential</Link>
+                <Link to="/productListing" className="navbar-links">Home Essential</Link>
                 </li>
             </ul>
         </div>
 
-        <div className="navbar-components">
+        <div className="navbar-link-componentss">
             <ul className="navbar-list-links-components"> 
                 <li className="navbar-links icons-align">
                     <Link to="/wishlist" className="icon-size"><BsFillHeartFill/></Link>
@@ -49,11 +47,7 @@ const  Navbar = () => {
             </ul>
         </div>
 
-        <div className="hamburger-menu">
-            <Link to="" className="icon-size" onClick={() => setShowMediaIcons(!showMediaIcons)}>
-              <GiHamburgerMenu />
-            </Link>
-          </div>
+
   </div>
     </>
   )

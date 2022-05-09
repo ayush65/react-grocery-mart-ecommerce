@@ -1,23 +1,42 @@
-import React,{useState} from 'react'
+import React,{ useContext , useState } from 'react'
 import { useFilter } from "../../../context/filter-context";
 import "./CartCard.css"
+import { useCart } from '../../../context/cart-context';
+
+export const reducerFunc = (statetotal , action ) => {
+  switch(action.type) {
+    case 'increment': {
+      return {
+        ...statetotal, 
+        count: statetotal.count + 1,
+        totalprice : Number(statetotal.totalprice) + Number(action.payload),
+      }
+    }
+    case 'decrement': {
+        return {
+          ...statetotal, 
+          count: statetotal.count - 1,
+          totalprice : Number(statetotal.totalprice) - Number(action.payload),
+      }
+    }
+    default: return statetotal
+    
+  }
+}
+
+export const initialstate = {
+  count: 0,
+  totalprice : 0,
+};
 
 function CardCart({item}) {
     const { dispatch } = useFilter();
     const { _id, itemName, price, imgUrl, alt} = item;
-    const [itemsNumber , SetItemNumber] = useState(1);
 
-    const addItems = () => {
-        SetItemNumber(itemsNumber + 1);
-    }
+    const { stateDispatch } = useCart();
 
-    const removeItems = () => {
-        if(itemsNumber === 1){
-            return itemsNumber;
-        }
-        SetItemNumber(itemsNumber - 1);
-    }
-    
+    const [total , setTotal] = useState(0);
+
   return (
     <>
     <div className="cart-container">
@@ -33,16 +52,16 @@ function CardCart({item}) {
                   Rs{price}
                 </h1>
                 <div className="card-items-number">
-                    <button onClick={() => addItems()} className="cart-items-button">+</button>
-                    <h1 className="cart-item-number-text">  {itemsNumber}  </h1>
-                    <button onClick={() => removeItems()} className="cart-items-button">-</button>
+                    <button onClick={() => stateDispatch({ type : 'increment' , payload : price})} className="cart-items-button btn-gap">+</button>
+                    
+                    <button onClick={() => stateDispatch({ type : 'decrement'  , payload : price})} className="cart-items-button">-</button>
                 </div>
 
                 <button className="btn-product-card cart-btn"
                           onClick={() =>
                             dispatch({
                               type: "ADD_TO_WISHLIST",
-                              payload: { itemId: item._id },
+                              payload: { itemId: _id },
                             })
                           }>Add To Wishlist</button>
                 <button
@@ -57,11 +76,12 @@ function CardCart({item}) {
 
               </div>
     </div>
+    
 
-</div>
 
+</div> 
     </>
   )
 }
 
-export default CardCart
+export default CardCart 

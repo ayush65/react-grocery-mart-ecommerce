@@ -14,3 +14,11 @@
       color: var(--white);
       border-color: 1px var(--primary-color);
 }
+
+@media only screen and (max-width: 500px) {
+      .product-container {
+         width: 45%;
+         left: 50%;
+         top: 13%;
+      }
+    }

@@ -2,6 +2,7 @@ import React from 'react'
 import './Categorycard.css'
 import axios from "axios";
 import { useState,useEffect } from "react";
+import { Link } from 'react-router-dom';
 
 
 const  Categorycard = () =>  {
@@ -23,7 +24,7 @@ const  Categorycard = () =>  {
   return (
     <div className="Categorycard">
   <h1 className="Categorycard-heading">Categories</h1>
-  <div className="card-grid">{
+  <Link to= "/productListing" className="card-grid">{
             data.map((item) => {
               return <div key={item._id} className="card card-shadow">
                 <div className="card-header card-image">
@@ -33,9 +34,10 @@ const  Categorycard = () =>  {
                   {item.Description}
                 </h1>
               </div>
+
             })
     }
-    </div>
+    </Link>
     </div>
   )
 }

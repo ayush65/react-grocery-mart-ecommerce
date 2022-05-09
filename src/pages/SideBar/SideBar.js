@@ -12,27 +12,20 @@ function SideBar() {
   return (
     <>
 
-        <div className="main-menu">
+        <div className="main-menu1">
+
+        <button
+        onClick={() => {
+          dispatch({ type: "CLEAR_FILTER" });
+        }}
+        className=" radio_text btn-clear"
+      >Clear</button>
 
         <h1>Sort by Price</h1>
         <ul className="sidebar-components-margin">
-          <li>
-        <label
-          onClick={() =>
-            dispatch({ type: "SORT_FILTER", payload: { sort: "LOW_TO_HIGH" } })
-          }
-          className="radio"
-        >
-          <input
-            type="radio"
-            value="highToLow"
-            name="price"
-            checked={sort === "LOW_TO_HIGH"}
-          />
-          <span className="radio_text">Price- High to low</span>
-        </label>
-          
-            </li>
+
+
+
               <li>
         <label
           onClick={() =>
@@ -41,7 +34,7 @@ function SideBar() {
           className="radio"
         >
           <input
-            type="radio"
+            type="checkbox"
             value="lowToHigh"
             name="price"
             checked={sort === "HIGH_TO_LOW"}
@@ -49,6 +42,27 @@ function SideBar() {
           <span className="radio_text">Price: Low to High</span>
         </label>
         </li>
+        <li>
+ 
+        </li>
+
+        <li>
+        <label
+          onClick={() =>
+            dispatch({ type: "SORT_FILTER", payload: { sort: "LOW_TO_HIGH" } })
+          }
+          className="radio"
+        >
+          <input
+            type="checkbox"
+            value="highToLow"
+            name="price"
+            checked={sort === "LOW_TO_HIGH"}
+          />
+          <span className="radio_text">Price- High to low</span>
+        </label>
+          
+            </li>
 
         </ul>
 
@@ -129,6 +143,7 @@ function SideBar() {
            </li>
 
             <li>
+
         <span
               onClick={() =>
                 dispatch({

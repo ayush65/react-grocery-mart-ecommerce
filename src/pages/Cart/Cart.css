@@ -2,3 +2,34 @@
     text-align: center;
     margin-bottom: 3%;
 }
+.cart-total{
+    width: 60%;
+    height: 30%;
+    background-color: 	#F0F0F0;
+    position: absolute;
+    margin-left: 16%;
+}
+.card-Heading{
+    margin-left: 40%;
+    font-size: 3rem;
+}
+.price-item{
+    position: absolute;
+    right: 6%;
+    top: 15%;
+}
+.item {
+    position: absolute;
+    top: 29%;
+}
+.para-item{
+    margin-left: 2rem;
+}
+
+@media only screen and (max-width: 500px) {
+    .div-total{
+        position: absolute;
+        top: 90%;
+        right: 20%;
+    }
+  }
