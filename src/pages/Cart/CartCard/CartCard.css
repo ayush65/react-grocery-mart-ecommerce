@@ -37,9 +37,9 @@
     color: var(--primary-color);
     padding: 1rem;
 }
-.total-price{
-    margin-top: 5.1rem;
-}
 .btn-gap{
-    margin-right: 1rem;
+    margin-right: 1.5rem;
+}
+.total-item{
+    margin-top: 3.3rem;
 }

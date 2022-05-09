@@ -35,7 +35,7 @@ function CardCart({item}) {
 
     const { stateDispatch } = useCart();
 
-    const [total , setTotal] = useState(0);
+    const [total , setTotal] = useState(1);
 
   return (
     <>
@@ -52,9 +52,16 @@ function CardCart({item}) {
                   Rs{price}
                 </h1>
                 <div className="card-items-number">
-                    <button onClick={() => stateDispatch({ type : 'increment' , payload : price})} className="cart-items-button btn-gap">+</button>
-                    
-                    <button onClick={() => stateDispatch({ type : 'decrement'  , payload : price})} className="cart-items-button">-</button>
+                    <button onClick={() =>
+                      {
+                        
+                        setTotal(total + 1) ; stateDispatch({ type : 'increment' , payload : price})} }
+                      className="cart-items-button btn-gap">+</button>
+                    <h1 className="total-item">{total}</h1>
+                    <button onClick={() => {
+                      setTotal(total - 1)
+                      stateDispatch({ type : 'decrement'  , payload : price})}}
+                       className="cart-items-button">-</button>
                 </div>
 
                 <button className="btn-product-card cart-btn"

@@ -3,14 +3,15 @@ import "./Navbar.css";
 import { BsFillHeartFill , BsFillCartFill , BsPersonCircle} from "react-icons/bs";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { Link } from 'react-router-dom'
+import { useFilter } from '../../context/filter-context';
 
 
 const  Navbar = () => {
-    const [showMediaIcons, setShowMediaIcons] = useState(false);
 
-
+    const {  dispatch } = useFilter();
 
   return (
+
     <>
      <div className="navbar-container">  
      <div className="navbar-logo">
@@ -20,13 +21,40 @@ const  Navbar = () => {
             <ul className="navbar-list-links">
 
                 <li className="navbar-links">
-                <Link to="/productListing" className="navbar-links">Bakery</Link>
+                <Link to="/productListing" 
+                className="navbar-links"
+                onClick={() => {
+              
+                    dispatch({
+                      type: "TOGGLE_CATEGORY",
+                      payload: { category: "bakery" },
+                    })
+                  }
+                }>Bakery</Link>
                 </li>
                 <li className="navbar-links">
-                    <Link to="/productListing" className="navbar-links">Fruits And Vegetables</Link>
+                    <Link to="/productListing"
+                     className="navbar-links"
+                     onClick={() => {
+              
+                        dispatch({
+                          type: "TOGGLE_CATEGORY",
+                          payload: { category: "vegetable" },
+                        })
+                      }
+                    }>Fruits And Vegetables</Link>
                 </li>
                 <li className="navbar-links">
-                <Link to="/productListing" className="navbar-links">Home Essential</Link>
+                <Link to="/productListing"
+                 className="navbar-links"
+                 onClick={() => {
+              
+                    dispatch({
+                      type: "TOGGLE_CATEGORY",
+                      payload: { category: "Home" },
+                    })
+                  }
+                }>Home Essential</Link>
                 </li>
             </ul>
         </div>
