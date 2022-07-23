@@ -8,7 +8,7 @@ export const reducerFunc = (statetotal , action ) => {
     case 'increment': {
       return {
         ...statetotal, 
-        count: statetotal.count + 1,
+        count:  action.payload,
         totalprice : Number(statetotal.totalprice) + Number(action.payload),
       }
     }
@@ -25,7 +25,7 @@ export const reducerFunc = (statetotal , action ) => {
 }
 
 export const initialstate = {
-  count: 0,
+  count: "",
   totalprice : 0,
 };
 
@@ -35,7 +35,7 @@ function CardCart({item}) {
 
     const { stateDispatch } = useCart();
 
-    const [total , setTotal] = useState(1);
+    const [total , setTotal] = useState(0);
 
   return (
     <>
@@ -54,8 +54,7 @@ function CardCart({item}) {
                 <div className="card-items-number">
                     <button onClick={() =>
                       {
-                        
-                        setTotal(total + 1) ; stateDispatch({ type : 'increment' , payload : price})} }
+                        setTotal(total + 1) ; stateDispatch({ type : 'increment' , payload : "ayush"})} }
                       className="cart-items-button btn-gap">+</button>
                     <h1 className="total-item">{total}</h1>
                     <button onClick={() => {
