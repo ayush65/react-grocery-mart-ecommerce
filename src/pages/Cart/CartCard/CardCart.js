@@ -1,93 +1,99 @@
-import React,{ useContext , useState } from 'react'
-import { useFilter } from "../../../context/filter-context";
-import "./CartCard.css"
-import { useCart } from '../../../context/cart-context';
+/** @format */
 
-export const reducerFunc = (statetotal , action ) => {
-  switch(action.type) {
-    case 'increment': {
+import React, { useContext, useState } from "react";
+import { useFilter } from "../../../context/filter-context";
+import "./CartCard.css";
+import { useCart } from "../../../context/cart-context";
+
+export const reducerFunc = (statetotal, action) => {
+  switch (action.type) {
+    case "increment": {
       return {
-        ...statetotal, 
-        count:  action.payload,
-        totalprice : Number(statetotal.totalprice) + Number(action.payload),
-      }
+        ...statetotal,
+        count: action.payload,
+        totalprice: Number(statetotal.totalprice) + Number(action.payload),
+      };
     }
-    case 'decrement': {
-        return {
-          ...statetotal, 
-          count: statetotal.count - 1,
-          totalprice : Number(statetotal.totalprice) - Number(action.payload),
-      }
+    case "decrement": {
+      return {
+        ...statetotal,
+        count: statetotal.count - 1,
+        totalprice: Number(statetotal.totalprice) - Number(action.payload),
+      };
     }
-    default: return statetotal
-    
+    default:
+      return statetotal;
   }
-}
+};
 
 export const initialstate = {
   count: "",
-  totalprice : 0,
+  totalprice: 0,
 };
 
-function CardCart({item}) {
-    const { dispatch } = useFilter();
-    const { _id, itemName, price, imgUrl, alt} = item;
+function CardCart({ item }) {
+  const { dispatch } = useFilter();
+  const { _id, itemName, price, imgUrl, alt } = item;
 
-    const { stateDispatch } = useCart();
+  const { stateDispatch } = useCart();
 
-    const [total , setTotal] = useState(0);
+  const [total, setTotal] = useState(0);
 
   return (
     <>
-    <div className="cart-container">
-    <div className="card-grid">
-              <div key={_id} className="card card-shadow cart-card" >
-                <div className="card-header card-image cart-image">
-                  <img src={imgUrl} alt={alt}/>
-                </div>
-                <h1 className="card-body cart-item-align">
-                  {itemName}
-                </h1>
-                <h1 className="card-body cart-item-align">
-                  Rs{price}
-                </h1>
-                <div className="card-items-number">
-                    <button onClick={() =>
-                      {
-                        setTotal(total + 1) ; stateDispatch({ type : 'increment' , payload : "ayush"})} }
-                      className="cart-items-button btn-gap">+</button>
-                    <h1 className="total-item">{total}</h1>
-                    <button onClick={() => {
-                      setTotal(total - 1)
-                      stateDispatch({ type : 'decrement'  , payload : price})}}
-                       className="cart-items-button">-</button>
-                </div>
+      <div className='cart-container'>
+        <div className='card-grid'>
+          <div key={_id} className='card card-shadow cart-card'>
+            <div className='card-header card-image cart-image'>
+              <img src={imgUrl} alt={alt} />
+            </div>
+            <h1 className='card-body cart-item-align'>{itemName}</h1>
+            <h1 className='card-body cart-item-align'>Rs{price}</h1>
+            <div className='card-items-number'>
+              <button
+                onClick={() => {
+                  setTotal(total + 1);
+                  stateDispatch({ type: "increment", payload: price });
+                }}
+                className='cart-items-button btn-gap'>
+                +
+              </button>
+              <h1 className='total-item'>{total}</h1>
+              <button
+                onClick={() => {
+                  setTotal(total - 1);
+                  stateDispatch({ type: "decrement", payload: price });
+                }}
+                className='cart-items-button'>
+                -
+              </button>
+            </div>
 
-                <button className="btn-product-card cart-btn"
-                          onClick={() =>
-                            dispatch({
-                              type: "ADD_TO_WISHLIST",
-                              payload: { itemId: _id },
-                            })
-                          }>Add To Wishlist</button>
-                <button
-                   onClick={() =>
-                      dispatch({
-                       type: "REMOVE_FROM_CART",
-                        payload: { itemId: _id },
-                       })
-                    }
-                     class="btn-product-card cart-btn"
-                  >Remove from Cart</button>
-
-              </div>
-    </div>
-    
-
-
-</div> 
+            <button
+              className='btn-product-card cart-btn'
+              onClick={() =>
+                dispatch({
+                  type: "ADD_TO_WISHLIST",
+                  payload: { itemId: _id },
+                })
+              }>
+              Add To Wishlist
+            </button>
+            <button
+              onClick={() =>
+                dispatch({
+                  type: "REMOVE_FROM_CART",
+                  payload: { itemId: _id },
+                })
+              }
+              class='btn-product-card cart-btn'>
+              Remove from Cart
+            </button>
+          </div>
+        </div>
+      </div>
     </>
-  )
+  );
 }
 
-export default CardCart 
+export default CardCart;
