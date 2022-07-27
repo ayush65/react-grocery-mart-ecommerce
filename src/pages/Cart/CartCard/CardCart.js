@@ -1,6 +1,6 @@
 /** @format */
 
-import React, { useContext, useState } from "react";
+import React, { useState } from "react";
 import { useFilter } from "../../../context/filter-context";
 import "./CartCard.css";
 import { useCart } from "../../../context/cart-context";
