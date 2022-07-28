@@ -100,6 +100,7 @@ const SignIn = () => {
           </Link>
         </p>
       </div>
+      <img className='img-landing' src='https://i.gifer.com/9Aug.gif' alt='' />
     </>
   );
 };
